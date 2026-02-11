@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #041c1c, #000);
+  font-family: 'Cinzel', serif;
+  color: silver;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-shadow: 0 0 20px #00ffee;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+  grid-template-rows: repeat(8, 80px);
+  gap: 2px;
+  background-color: #333;
+  border: 5px solid #222;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.square.white {
+  background-color: #eee;
+}
+
+.square.black {
+  background-color: #666;
+}
+
+.square.selected {
+  outline: 4px solid #00ffee;
+  outline-offset: -2px;
+}
+
+.waiting {
+  font-size: 28px;
+  padding: 40px;
+  text-shadow: 0 0 15px cyan;
+  background: rgba(0,0,0,0.7);
+  border-radius: 20px;
+}
+
+.checkmate {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: #00ffee;
+  text-shadow: 0 0 30px #00ffee;
+  background: rgba(0,0,0,0.9);
+  padding: 20px 40px;
+  border-radius: 20px;
+  z-index: 1000;
+}
+.player-names {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px cyan;
+  display: flex;
+  justify-content: space-around;
+  width: 660px;
+}
